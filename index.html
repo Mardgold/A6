@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            background: url('https://moya-planeta.ru/upload/images/xl/85/ec/85ec639804ea05eb0d5bf4e6793c540e5951d508.jpg') no-repeat center/cover;
+            height: 500px;
+        }
+
+        .circle-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            background: url('https://truetravel.su/upload/medialibrary/d01/1200px_Matterhorn_from_Domh_tte_2.jpg') no-repeat center/cover;
+            height: 300px;
+        }
+
+        .gallery-item .title {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">Главная</a>
+        <a href="#">О нас</a>
+        <a href="#">Услуги</a>
+        <a href="#">Контакты</a>
+    </header>
+
+    <div class="hero">
+        <div class="circle-text">Заголовок<br>Для редактирования данного текста дважды кликните по нему</div>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <div class="title">Заголовок</div>
+        </div>
+        <div class="gallery-item">
+            <div class="title">Заголовок</div>
+        </div>
+        <div class="gallery-item">
+            <div class="title">Заголовок</div>
+        </div>
+    </div>
+</body>
+</html>
